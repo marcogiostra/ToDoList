@@ -17,9 +17,9 @@ namespace ToDoList
 
 
         #region DICHIARAZIONI_TO_DOLIST
-        private string fileToDoList = "todo.json";
+        private string fileToDoList = "d1.dwgtodo";
 
-        private string FileCategorieToDoList = "categorie.json";
+        private string FileCategorieToDoList = "c1.dwgtodo";
         private List<string> categorie = new List<string>();
 
         int nextId = 0;
@@ -36,9 +36,9 @@ namespace ToDoList
         #endregion DICHIARAZIONI_TO_DOLIST
 
         #region DICHIARAZIONI_MIO_ARCHIVIO
-        private string fileMioArchivio = "myinfo.json";
+        private string fileMioArchivio = "d3.dwgtodo";
 
-        private string fileMioArchvioCategorie = "categorie_my_info.json";
+        private string fileMioArchvioCategorie = "c3.dwgtodo";
         private List<string> categorie2 = new List<string>();
 
         int nextId2 = 0;
@@ -57,7 +57,7 @@ namespace ToDoList
         #endregion DICHIARAZIONI_MIO_ARCHIVIO
 
         #region DICHIARAZIONI_MEMO
-        private string fileMemo =  "memo.json";
+        private string fileMemo = "d2.dwgtodo";
         #endregion DICHIARAZIONI_MEMO
 
         #region FILEPATH
@@ -105,7 +105,7 @@ namespace ToDoList
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            btnSalvaMemo_Click(null, null);
+            SaveMemo();
         }
         #endregion Class
 
@@ -137,7 +137,13 @@ namespace ToDoList
             {
                 try
                 {
-                    string json = File.ReadAllText(_todoCategorieFilePath);
+                    // Legge il file cifrato
+                    string encryptedJson = File.ReadAllText(_todoCategorieFilePath);
+
+                    // Decritta il contenuto
+                    string json = DecryptString(encryptedJson);
+
+                    // Deserializza il JSON in una lista di stringhe
                     categorie = JsonConvert.DeserializeObject<List<string>>(json) ?? new List<string>();
                 }
                 catch
@@ -145,6 +151,9 @@ namespace ToDoList
                     categorie = new List<string>();
                 }
             }
+            else
+                categorie = new List<string>();
+
             // Popola la ComboBox
             cmbCategoria.Items.Clear();
             cmbCategoria.Items.AddRange(categorie.ToArray());
@@ -194,8 +203,15 @@ namespace ToDoList
         {
             try
             {
+                // Serializza normalmente la lista
                 string json = JsonConvert.SerializeObject(categorie, Formatting.Indented);
-                File.WriteAllText(_todoCategorieFilePath, json);
+
+                // Cripta l'intero JSON (usa la tua EncryptString)
+                string encryptedJson = EncryptString(json);
+
+                // Scrive la stringa cifrata nel file
+                File.WriteAllText(_todoCategorieFilePath, encryptedJson);
+
             }
             catch
             {
@@ -318,6 +334,68 @@ namespace ToDoList
         }
 
         #region JSON_TODOLIST
+
+        private void SaveData()
+        {
+            try
+            {
+                var cloneList = items.Select(x => new ToDoItem
+                {
+                    ID = x.ID,
+                    Nota = x.Nota,       
+                    DataInserimento = x.DataInserimento,
+                    DataScadenza = x.DataScadenza,
+                    Categoria = x.Categoria,
+                    Fatto = x.Fatto,
+                    Stato = x.Stato
+                }).ToList();
+
+                string json = JsonConvert.SerializeObject(cloneList, Formatting.Indented);
+
+                // Cripta tutta la stringa JSON (EncryptString deve restituire stringa base64 o simile)
+                string encryptedJson = EncryptString(json);
+
+                File.WriteAllText(_todoFilePath, encryptedJson);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore durante il salvataggio dei dati:\n" + ex.Message,
+                    "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoadData()
+        {
+            try
+            {
+                if (File.Exists(_todoFilePath))
+                {
+                    string encryptedJson = File.ReadAllText(_todoFilePath);
+                    string json = DecryptString(encryptedJson);
+
+                    var list = JsonConvert.DeserializeObject<List<ToDoItem>>(json) ?? new List<ToDoItem>();
+
+                    // se vuoi, decodifica/trasforma campi qui (non necessario se non li hai crittati singolarmente)
+                    items = new BindingList<ToDoItem>(list);
+
+                }
+                else
+                {
+                    items = new BindingList<ToDoItem>();
+                }
+
+                dgv.DataSource = items;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore durante il caricamento dei dati:\n" + ex.Message,
+                    "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                items = new BindingList<ToDoItem>();
+                dgv.DataSource = items;
+            }
+        }
+
+        /*
         private void SaveData()
         {
             try
@@ -332,8 +410,8 @@ namespace ToDoList
                     "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        
 
-  
 
         private void LoadData()
         {
@@ -365,7 +443,7 @@ namespace ToDoList
             }
         }
 
-       
+       */
 
         #endregion JSON_TODOLIST
 
@@ -703,27 +781,64 @@ namespace ToDoList
         #endregion MENU_MIO_ARCHIVIO
 
         #region CATEGORIE_MIO_ARCHIVIO
+        private void SaveCategorie2()
+        {
+            try
+            {
+                // Serializza normalmente la lista
+                string json = JsonConvert.SerializeObject(categorie2, Formatting.Indented);
+
+                // Cripta l'intero JSON (usa la tua EncryptString)
+                string encryptedJson = EncryptString(json);
+
+                // Scrive la stringa cifrata nel file
+                File.WriteAllText(_mioarchivioCategorieFilePath, encryptedJson);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore durante il salvataggio delle categorie:\n" + ex.Message,
+                    "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void LoadCategorie2()
         {
-            if (File.Exists(_mioarchivioCategorieFilePath))
+            try
             {
-                try
+                if (File.Exists(_mioarchivioCategorieFilePath))
                 {
-                    string json = File.ReadAllText(_mioarchivioCategorieFilePath);
+                    // Legge il file cifrato
+                    string encryptedJson = File.ReadAllText(_mioarchivioCategorieFilePath);
+
+                    // Decritta il contenuto
+                    string json = DecryptString(encryptedJson);
+
+                    // Deserializza il JSON in una lista di stringhe
                     categorie2 = JsonConvert.DeserializeObject<List<string>>(json) ?? new List<string>();
                 }
-                catch
+                else
                 {
                     categorie2 = new List<string>();
                 }
-            }
-            // Popola la ComboBox
-            cmbCategoria2.Items.Clear();
-            cmbCategoria2.Items.AddRange(categorie2.ToArray());
 
-            // Popola la ComboBox
-            UpdateComboBoxCategorie2();
+                // Popola la ComboBox
+                cmbCategoria2.Items.Clear();
+                cmbCategoria2.Items.AddRange(categorie2.ToArray());
+
+                // Aggiorna eventuali logiche aggiuntive
+                UpdateComboBoxCategorie2();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore durante il caricamento delle categorie:\n" + ex.Message,
+                    "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                categorie2 = new List<string>();
+                cmbCategoria2.Items.Clear();
+            }
         }
+
+
 
         private void UpdateComboBoxCategorie2()
         {
@@ -761,18 +876,6 @@ namespace ToDoList
                 }
             }
 
-        }
-        private void SaveCategorie2()
-        {
-            try
-            {
-                string json = JsonConvert.SerializeObject(categorie2, Formatting.Indented);
-                File.WriteAllText(_mioarchivioCategorieFilePath, json);
-            }
-            catch
-            {
-                // gestire eventuali errori
-            }
         }
         #endregion CATEGORIE_MIO_ARCHIVIO
 
@@ -855,6 +958,7 @@ namespace ToDoList
         }
 
         #region JSON_MIO_ARCHIVIO
+        /*
         private void SaveData2()
         {
             try
@@ -866,11 +970,10 @@ namespace ToDoList
                 var cloneList = DBitems.Select(x => new MioArchivio
                 {
                     ID = x.ID,
-                    Nota = x.Nota,
+                    Nota = EncryptString(x.Nota),
                     Valore = EncryptString(x.Valore),
-                    Categoria = x.Categoria
+                    Categoria = EncryptString(x.Categoria)
                 }).ToList();
-
                 string json = JsonConvert.SerializeObject(cloneList, Formatting.Indented);
 
                 File.WriteAllText(_mioarchivioFilePath, json);
@@ -897,6 +1000,8 @@ namespace ToDoList
                         foreach (var item in list)
                         {
                             item.Valore = DecryptString(item.Valore);
+                            item.Nota = DecryptString(item.Nota);
+                            item.Categoria = DecryptString(item.Categoria);
                         }
                         DBitems = new BindingList<MioArchivio>(list);
                     }
@@ -918,9 +1023,68 @@ namespace ToDoList
                 dgv2.DataSource = DBitems;
             }
         }
+        */
 
+        // SaveData2: serializza e poi cripta l'intero JSON
+        private void SaveData2()
+        {
+            try
+            {
+                // (se vuoi cifrare anche i singoli campi non è necessario se cripti l'intero JSON)
+                var cloneList = DBitems.Select(x => new MioArchivio
+                {
+                    ID = x.ID,
+                    Nota = x.Nota,       // mantieni in chiaro qui: verrà cifrato insieme al JSON
+                    Valore = x.Valore,
+                    Categoria = x.Categoria
+                }).ToList();
 
+                string json = JsonConvert.SerializeObject(cloneList, Formatting.Indented);
 
+                // Cripta tutta la stringa JSON (EncryptString deve restituire stringa base64 o simile)
+                string encryptedJson = EncryptString(json);
+
+                File.WriteAllText(_mioarchivioFilePath, encryptedJson);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore durante il salvataggio dei dati:\n" + ex.Message,
+                    "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // LoadData2: legge, decripta, poi deserializza
+        private void LoadData2()
+        {
+            try
+            {
+                if (File.Exists(_mioarchivioFilePath))
+                {
+                    string encryptedJson = File.ReadAllText(_mioarchivioFilePath);
+                    string json = DecryptString(encryptedJson);
+
+                    var list = JsonConvert.DeserializeObject<List<MioArchivio>>(json) ?? new List<MioArchivio>();
+
+                    // se vuoi, decodifica/trasforma campi qui (non necessario se non li hai crittati singolarmente)
+                    DBitems = new BindingList<MioArchivio>(list);
+                }
+                else
+                {
+                    DBitems = new BindingList<MioArchivio>();
+                }
+
+                dgv2.DataSource = DBitems;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore durante il caricamento dei dati:\n" + ex.Message,
+                    "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DBitems = new BindingList<MioArchivio>();
+                dgv2.DataSource = DBitems;
+            }
+        }
+
+  
         #endregion JSON_TODOLIST
 
         #region REFRESH_DGV
@@ -1256,6 +1420,8 @@ namespace ToDoList
         #region MEMO
 
         #region f()
+
+        /*
         private void LoadMemo()
         {
             try
@@ -1275,8 +1441,8 @@ namespace ToDoList
             }
         }
 
-        #endregion f()
-        private void btnSalvaMemo_Click(object sender, EventArgs e)
+
+        private void SaveMemo()
         {
             try
             {
@@ -1289,6 +1455,60 @@ namespace ToDoList
                 MessageBox.Show("Errore durante il salvataggio del memo:\n" + ex.Message,
                     "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+        }
+        */
+
+        private void LoadMemo()
+        {
+            try
+            {
+                if (File.Exists(_memoFilePath))
+                {
+                    string json = File.ReadAllText(_memoFilePath);
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
+
+                    if (data != null && data.ContainsKey("Note"))
+                    {
+                        // Decifra il valore della nota
+                        txtMemo.Text = DecryptString(data["Note"]);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore durante il caricamento del memo:\n" + ex.Message,
+                    "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        private void SaveMemo()
+        {
+            try
+            {
+                // Cifra solo il valore della nota
+                var data = new Dictionary<string, string>
+                {
+                    ["Note"] = EncryptString(txtMemo.Text)
+                };
+
+                string json = JsonConvert.SerializeObject(data, Formatting.Indented);
+
+                File.WriteAllText(_memoFilePath, json);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore durante il salvataggio del memo:\n" + ex.Message,
+                    "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        #endregion f()
+        private void btnSalvaMemo_Click(object sender, EventArgs e)
+        {
+            SaveMemo();
         }
         #endregion MEMO
 

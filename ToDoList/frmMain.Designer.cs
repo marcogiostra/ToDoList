@@ -100,7 +100,7 @@
             this.dgv.Location = new System.Drawing.Point(4, 85);
             this.dgv.Name = "dgv";
             this.dgv.Size = new System.Drawing.Size(906, 390);
-            this.dgv.TabIndex = 1;
+            this.dgv.TabIndex = 8;
             this.dgv.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_ColumnHeaderMouseClick);
             this.dgv.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_RowValidated);
             // 
@@ -129,7 +129,7 @@
             this.cmbCategoria.Location = new System.Drawing.Point(85, 38);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(240, 26);
-            this.cmbCategoria.TabIndex = 9;
+            this.cmbCategoria.TabIndex = 3;
             // 
             // label3
             // 
@@ -137,7 +137,7 @@
             this.label3.Location = new System.Drawing.Point(331, 43);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 18);
-            this.label3.TabIndex = 8;
+            this.label3.TabIndex = 4;
             this.label3.Text = "Stato";
             // 
             // chkScadenza
@@ -145,9 +145,9 @@
             this.chkScadenza.AutoSize = true;
             this.chkScadenza.Location = new System.Drawing.Point(621, 41);
             this.chkScadenza.Name = "chkScadenza";
-            this.chkScadenza.Size = new System.Drawing.Size(86, 22);
-            this.chkScadenza.TabIndex = 7;
-            this.chkScadenza.Text = "Data fine";
+            this.chkScadenza.Size = new System.Drawing.Size(89, 22);
+            this.chkScadenza.TabIndex = 5;
+            this.chkScadenza.Text = "Data Fine";
             this.chkScadenza.UseVisualStyleBackColor = true;
             // 
             // btnSAlva
@@ -155,7 +155,7 @@
             this.btnSAlva.Location = new System.Drawing.Point(824, 38);
             this.btnSAlva.Name = "btnSAlva";
             this.btnSAlva.Size = new System.Drawing.Size(60, 27);
-            this.btnSAlva.TabIndex = 6;
+            this.btnSAlva.TabIndex = 7;
             this.btnSAlva.Text = "Salva";
             this.btnSAlva.UseVisualStyleBackColor = true;
             this.btnSAlva.Click += new System.EventHandler(this.btnSAlva_Click);
@@ -166,7 +166,7 @@
             this.dtpScadenza.Location = new System.Drawing.Point(708, 39);
             this.dtpScadenza.Name = "dtpScadenza";
             this.dtpScadenza.Size = new System.Drawing.Size(112, 26);
-            this.dtpScadenza.TabIndex = 5;
+            this.dtpScadenza.TabIndex = 6;
             this.dtpScadenza.Value = new System.DateTime(2025, 10, 11, 0, 0, 0, 0);
             // 
             // cmbStato
@@ -260,7 +260,7 @@
             this.dgv2.Location = new System.Drawing.Point(0, 86);
             this.dgv2.Name = "dgv2";
             this.dgv2.Size = new System.Drawing.Size(906, 390);
-            this.dgv2.TabIndex = 2;
+            this.dgv2.TabIndex = 7;
             this.dgv2.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv2_ColumnHeaderMouseClick);
             // 
             // panel2
@@ -285,7 +285,7 @@
             this.txtValore.Location = new System.Drawing.Point(415, 39);
             this.txtValore.Name = "txtValore";
             this.txtValore.Size = new System.Drawing.Size(403, 26);
-            this.txtValore.TabIndex = 11;
+            this.txtValore.TabIndex = 5;
             // 
             // label4
             // 
@@ -293,7 +293,7 @@
             this.label4.Location = new System.Drawing.Point(361, 43);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 18);
-            this.label4.TabIndex = 10;
+            this.label4.TabIndex = 4;
             this.label4.Text = "Valore";
             // 
             // cmbCategoria2
@@ -302,7 +302,7 @@
             this.cmbCategoria2.Location = new System.Drawing.Point(103, 40);
             this.cmbCategoria2.Name = "cmbCategoria2";
             this.cmbCategoria2.Size = new System.Drawing.Size(240, 26);
-            this.cmbCategoria2.TabIndex = 9;
+            this.cmbCategoria2.TabIndex = 3;
             // 
             // btnSalvaDB
             // 
