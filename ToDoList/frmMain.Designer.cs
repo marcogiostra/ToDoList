@@ -75,7 +75,7 @@
             this.TC.Margin = new System.Windows.Forms.Padding(4);
             this.TC.Name = "TC";
             this.TC.SelectedIndex = 0;
-            this.TC.Size = new System.Drawing.Size(916, 513);
+            this.TC.Size = new System.Drawing.Size(969, 513);
             this.TC.TabIndex = 0;
             // 
             // tpToDoList
@@ -86,7 +86,7 @@
             this.tpToDoList.Margin = new System.Windows.Forms.Padding(4);
             this.tpToDoList.Name = "tpToDoList";
             this.tpToDoList.Padding = new System.Windows.Forms.Padding(4);
-            this.tpToDoList.Size = new System.Drawing.Size(908, 482);
+            this.tpToDoList.Size = new System.Drawing.Size(961, 482);
             this.tpToDoList.TabIndex = 0;
             this.tpToDoList.Text = "To do list               ";
             this.tpToDoList.UseVisualStyleBackColor = true;
@@ -99,7 +99,7 @@
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Location = new System.Drawing.Point(4, 85);
             this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(906, 390);
+            this.dgv.Size = new System.Drawing.Size(959, 390);
             this.dgv.TabIndex = 8;
             this.dgv.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_ColumnHeaderMouseClick);
             this.dgv.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_RowValidated);
@@ -120,7 +120,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(900, 76);
+            this.panel1.Size = new System.Drawing.Size(953, 76);
             this.panel1.TabIndex = 0;
             // 
             // cmbCategoria
@@ -142,8 +142,9 @@
             // 
             // chkScadenza
             // 
+            this.chkScadenza.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkScadenza.AutoSize = true;
-            this.chkScadenza.Location = new System.Drawing.Point(621, 41);
+            this.chkScadenza.Location = new System.Drawing.Point(664, 39);
             this.chkScadenza.Name = "chkScadenza";
             this.chkScadenza.Size = new System.Drawing.Size(89, 22);
             this.chkScadenza.TabIndex = 5;
@@ -152,7 +153,8 @@
             // 
             // btnSAlva
             // 
-            this.btnSAlva.Location = new System.Drawing.Point(824, 38);
+            this.btnSAlva.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSAlva.Location = new System.Drawing.Point(877, 36);
             this.btnSAlva.Name = "btnSAlva";
             this.btnSAlva.Size = new System.Drawing.Size(60, 27);
             this.btnSAlva.TabIndex = 7;
@@ -162,8 +164,9 @@
             // 
             // dtpScadenza
             // 
+            this.dtpScadenza.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpScadenza.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpScadenza.Location = new System.Drawing.Point(708, 39);
+            this.dtpScadenza.Location = new System.Drawing.Point(759, 38);
             this.dtpScadenza.Name = "dtpScadenza";
             this.dtpScadenza.Size = new System.Drawing.Size(112, 26);
             this.dtpScadenza.TabIndex = 6;
@@ -171,10 +174,12 @@
             // 
             // cmbStato
             // 
+            this.cmbStato.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbStato.FormattingEnabled = true;
             this.cmbStato.Location = new System.Drawing.Point(376, 38);
             this.cmbStato.Name = "cmbStato";
-            this.cmbStato.Size = new System.Drawing.Size(240, 26);
+            this.cmbStato.Size = new System.Drawing.Size(272, 26);
             this.cmbStato.TabIndex = 3;
             // 
             // label2
@@ -190,9 +195,11 @@
             // 
             // txtNotaToDo
             // 
+            this.txtNotaToDo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNotaToDo.Location = new System.Drawing.Point(85, 8);
             this.txtNotaToDo.Name = "txtNotaToDo";
-            this.txtNotaToDo.Size = new System.Drawing.Size(800, 26);
+            this.txtNotaToDo.Size = new System.Drawing.Size(852, 26);
             this.txtNotaToDo.TabIndex = 1;
             // 
             // label1
@@ -212,7 +219,7 @@
             this.tpMemo.Margin = new System.Windows.Forms.Padding(4);
             this.tpMemo.Name = "tpMemo";
             this.tpMemo.Padding = new System.Windows.Forms.Padding(4);
-            this.tpMemo.Size = new System.Drawing.Size(908, 482);
+            this.tpMemo.Size = new System.Drawing.Size(961, 482);
             this.tpMemo.TabIndex = 1;
             this.tpMemo.Text = "Memo               ";
             this.tpMemo.UseVisualStyleBackColor = true;
@@ -226,7 +233,7 @@
             this.txtMemo.Multiline = true;
             this.txtMemo.Name = "txtMemo";
             this.txtMemo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtMemo.Size = new System.Drawing.Size(905, 449);
+            this.txtMemo.Size = new System.Drawing.Size(958, 449);
             this.txtMemo.TabIndex = 1;
             // 
             // btnSalvaMemo
@@ -246,7 +253,7 @@
             this.tpArchivio.Margin = new System.Windows.Forms.Padding(4);
             this.tpArchivio.Name = "tpArchivio";
             this.tpArchivio.Padding = new System.Windows.Forms.Padding(4);
-            this.tpArchivio.Size = new System.Drawing.Size(908, 482);
+            this.tpArchivio.Size = new System.Drawing.Size(961, 482);
             this.tpArchivio.TabIndex = 2;
             this.tpArchivio.Text = "Mio archivio               ";
             this.tpArchivio.UseVisualStyleBackColor = true;
@@ -259,7 +266,7 @@
             this.dgv2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv2.Location = new System.Drawing.Point(0, 86);
             this.dgv2.Name = "dgv2";
-            this.dgv2.Size = new System.Drawing.Size(906, 390);
+            this.dgv2.Size = new System.Drawing.Size(959, 390);
             this.dgv2.TabIndex = 7;
             this.dgv2.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv2_ColumnHeaderMouseClick);
             // 
@@ -277,14 +284,16 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(900, 76);
+            this.panel2.Size = new System.Drawing.Size(953, 76);
             this.panel2.TabIndex = 1;
             // 
             // txtValore
             // 
+            this.txtValore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtValore.Location = new System.Drawing.Point(415, 39);
             this.txtValore.Name = "txtValore";
-            this.txtValore.Size = new System.Drawing.Size(403, 26);
+            this.txtValore.Size = new System.Drawing.Size(467, 26);
             this.txtValore.TabIndex = 5;
             // 
             // label4
@@ -306,7 +315,8 @@
             // 
             // btnSalvaDB
             // 
-            this.btnSalvaDB.Location = new System.Drawing.Point(824, 38);
+            this.btnSalvaDB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalvaDB.Location = new System.Drawing.Point(888, 39);
             this.btnSalvaDB.Name = "btnSalvaDB";
             this.btnSalvaDB.Size = new System.Drawing.Size(60, 27);
             this.btnSalvaDB.TabIndex = 6;
@@ -327,9 +337,11 @@
             // 
             // txtNota2
             // 
+            this.txtNota2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNota2.Location = new System.Drawing.Point(103, 8);
             this.txtNota2.Name = "txtNota2";
-            this.txtNota2.Size = new System.Drawing.Size(782, 26);
+            this.txtNota2.Size = new System.Drawing.Size(845, 26);
             this.txtNota2.TabIndex = 1;
             // 
             // label6
@@ -345,7 +357,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(916, 513);
+            this.ClientSize = new System.Drawing.Size(969, 513);
             this.Controls.Add(this.TC);
             this.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
