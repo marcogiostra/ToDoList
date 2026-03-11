@@ -1,5 +1,8 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using DevExpress.XtraWaitForm;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,9 +17,17 @@ namespace ToDoList
         [STAThread]
         static void Main()
         {
+            //WindowsFormsSettings.SetPerMonitorDpiAware();
+
+            //DevExpress.Utils.AppearanceObject.DefaultFont = new Font("Segoe UI", 12F);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            
+            Application.Run(new frmMainNEW());
+
+
+            
         }
     }
 }

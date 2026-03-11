@@ -4,16 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ToDoList
+namespace ToDoList.Class
 {
-    public class ToDoItem
+    public class MioArchivio
     {
         public int ID { get; set; }
         public string Categoria { get; set; }
         public string Nota { get; set; }
-        public DateTime DataInserimento { get; set; }
-        public DateTime? DataScadenza { get; set; }
-        public bool Fatto { get; set; }
-        public string Stato { get; set; }
+        public string Valore { get; set; }
+        public string Valore2 { get; set; }
+
     }
 }

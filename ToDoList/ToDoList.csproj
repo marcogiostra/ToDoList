@@ -7,7 +7,7 @@
     <ProjectGuid>{DB6F4A7E-781B-46B1-AAB4-4251433F4674}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>ToDoList</RootNamespace>
-    <AssemblyName>ToDoList</AssemblyName>
+    <AssemblyName>DWG_Office_Utility</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -39,10 +39,19 @@
     <Reference Include="DevExpress.Data.Desktop.v22.2, Version=22.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v22.2, Version=22.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v22.2, Version=22.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v22.2.Core, Version=22.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v22.2.Core, Version=22.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v22.2.Core, Version=22.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v22.2.Core, Version=22.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v22.2, Version=22.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v22.2, Version=22.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -61,19 +70,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmMain.cs">
+    <Compile Include="AddItemForm\frmAddItemTDL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <Compile Include="AddItemForm\frmAddItemTDL.Designer.cs">
+      <DependentUpon>frmAddItemTDL.cs</DependentUpon>
     </Compile>
-    <Compile Include="MioArchivio.cs" />
+    <Compile Include="BaseClassXtraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class\CategoriaInfoEstesa.cs" />
+    <Compile Include="Class\InfoeEstesa.cs" />
+    <Compile Include="Class\MioArchivio.cs" />
+    <Compile Include="Class\ToDoItem.cs" />
+    <Compile Include="frmMainNEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainNEW.Designer.cs">
+      <DependentUpon>frmMainNEW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyPErsonalControl\myRich.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyPErsonalControl\myRich.Designer.cs">
+      <DependentUpon>myRich.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ToDoItem.cs" />
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <Compile Include="Static\CustomLocalizer.cs" />
+    <Compile Include="Static\DEV_GridView.cs" />
+    <Compile Include="Static\DEV_GridViewRowSearch.cs" />
+    <Compile Include="Static\Formattazioni.cs" />
+    <Compile Include="Static\Funzioni.cs" />
+    <Compile Include="Static\MSGBOX.cs" />
+    <EmbeddedResource Include="AddItemForm\frmAddItemTDL.resx">
+      <DependentUpon>frmAddItemTDL.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMainNEW.resx">
+      <DependentUpon>frmMainNEW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyPErsonalControl\myRich.resx">
+      <DependentUpon>myRich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
