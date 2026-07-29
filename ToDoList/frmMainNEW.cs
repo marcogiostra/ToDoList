@@ -329,6 +329,8 @@ namespace ToDoList
             gridView1.Columns["DataScadenza"].BestFit();
             gridView1.Columns["DataScadenza"].AppearanceHeader.TextOptions.HAlignment = HorzAlignment.Center;
             gridView1.Columns["DataScadenza"].AppearanceCell.TextOptions.HAlignment = HorzAlignment.Center;
+
+            DEV_GridView.ApplyGrouping(gridView1, "Categoria", false);
         }
         private void SaveToDoList()
         {
@@ -648,6 +650,8 @@ namespace ToDoList
             gridView3.Columns["Valore2"].AppearanceHeader.TextOptions.HAlignment = HorzAlignment.Near;
             gridView3.Columns["Valore2"].AppearanceCell.TextOptions.HAlignment = HorzAlignment.Near;
             gridView3.Columns["Valore2"].BestFit();
+
+            DEV_GridView.ApplyGrouping(gridView3, "Categoria", false);
         }
 
         private void SaveMioArchivio()
@@ -860,6 +864,8 @@ namespace ToDoList
                 if (item.ID > nextId_InfoEstese)
                     nextId_InfoEstese = item.ID;
             }
+
+            DEV_GridView.ApplyGrouping(gridView5, "Categoria", true);
         }
 
         private void GridInfoEstesePrepare()
@@ -877,6 +883,8 @@ namespace ToDoList
             gridView5.Columns["Titolo"].AppearanceHeader.TextOptions.HAlignment = HorzAlignment.Near;
             gridView5.Columns["Titolo"].AppearanceCell.TextOptions.HAlignment = HorzAlignment.Near;
             gridView5.Columns["Titolo"].BestFit();
+
+           
 
         }
 
@@ -1124,7 +1132,8 @@ namespace ToDoList
         {
             if (e.KeyCode == Keys.Return)
             {
-                if (!string.IsNullOrEmpty(gridView1.GetFocusedRowCellValue("ID").ToString()))
+                if (!DEV_GridView.IsRowGrouping(gridView1, null))
+                  if (!string.IsNullOrEmpty(gridView1.GetFocusedRowCellValue("ID").ToString()))
                 {
                     int _id = (Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID")));
                     ToDoItem item = ToDoListItems.FirstOrDefault(x => x.ID == _id);
@@ -1246,7 +1255,8 @@ namespace ToDoList
         {
             if (e.KeyCode == Keys.Return)
             {
-                if (!string.IsNullOrEmpty(gridView3.GetFocusedRowCellValue("ID").ToString()))
+                if (!DEV_GridView.IsRowGrouping(gridView3, null))
+                    if (!string.IsNullOrEmpty(gridView3.GetFocusedRowCellValue("ID").ToString()))
                 {
                     int _id = (Convert.ToInt32(gridView3.GetFocusedRowCellValue("ID")));
                     MioArchivio item = MioArchivioItems.FirstOrDefault(x => x.ID == _id);
@@ -1397,7 +1407,8 @@ namespace ToDoList
 
             if (e.KeyCode == Keys.Return)
             {
-                if (!string.IsNullOrEmpty(gridView5.GetFocusedRowCellValue("ID").ToString()))
+                if (!DEV_GridView.IsRowGrouping(gridView5, null))
+                    if (!string.IsNullOrEmpty(gridView5.GetFocusedRowCellValue("ID").ToString()))
                 {
                     int _id = (Convert.ToInt32(gridView5.GetFocusedRowCellValue("ID")));
                     InfoeEstesa item = InfoEsteseItems.FirstOrDefault(x => x.ID == _id);

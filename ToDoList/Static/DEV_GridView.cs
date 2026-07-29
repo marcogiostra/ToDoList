@@ -634,5 +634,257 @@ namespace ToDoList.Static
         }
         #endregion TEST
 
+        #region COLUMN_IN_GROUPING
+
+        /// <summary>
+        /// Imposta automaticamente il raggruppamento di una colonna
+        /// e opzionalmente blocca la possibilità di rimuoverlo.
+        /// </summary>
+        /// <param name="view">GridView DevExpress</param>
+        /// <param name="fieldName">Nome proprietà/campo della colonna</param>
+        /// <param name="lockGrouping">
+        /// true  = l'utente NON può togliere il raggruppamento
+        /// false = l'utente può annullare il raggruppamento
+        /// </param>
+        public static void ApplyGrouping(GridView view,string fieldName,bool lockGrouping = false)
+        {
+            if (view == null)
+                return;
+
+            GridColumn col = view.Columns[fieldName];
+
+            if (col == null)
+                return;
+
+            // Pulisce eventuali raggruppamenti precedenti
+            view.ClearGrouping();
+
+            // Raggruppa la colonna
+            col.GroupIndex = 0;
+
+            // Espande tutti i gruppi (opzionale)
+            view.ExpandAllGroups();
+
+            // Consente o blocca il drag della colonna
+            if (lockGrouping)
+            {
+                // L'utente NON può togliere il grouping
+                col.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+
+                // Nasconde il pannello di raggruppamento
+                // per evitare trascinamenti
+                //view.OptionsView.ShowGroupPanel = false;
+
+                // Blocca personalizzazione colonne
+                col.OptionsColumn.AllowMove = false;
+            }
+            else
+            {
+                // L'utente può modificare/rimuovere il grouping
+                col.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
+
+                // Mostra il pannello di grouping
+                //view.OptionsView.ShowGroupPanel = true;
+
+                col.OptionsColumn.AllowMove = true;
+            }
+        }
+
+        /// <summary>
+        /// Raggruppa automaticamente usando una GridColumn
+        /// </summary>
+        /// <param name="view">GridView</param>
+        /// <param name="column">Colonna da raggruppare</param>
+        /// <param name="lockGrouping">
+        /// true  = grouping bloccato
+        /// false = grouping modificabile
+        /// </param>
+        /// <param name="clearPreviousGroups">
+        /// true  = rimuove grouping precedenti
+        /// false = mantiene grouping esistenti
+        /// </param>
+        public static void ApplyGrouping(
+            GridView view,
+            GridColumn column,
+            bool lockGrouping = false,
+            bool clearPreviousGroups = true)
+        {
+            if (view == null || column == null)
+                return;
+
+            // Rimuove grouping precedenti
+            if (clearPreviousGroups)
+                view.ClearGrouping();
+
+            // Posizione grouping
+            int nextGroupIndex = view.GroupedColumns.Count;
+
+            // Applica grouping
+            column.GroupIndex = nextGroupIndex;
+
+            // Ordinamento coerente
+            column.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+
+            // Espande gruppi
+            view.ExpandAllGroups();
+
+            if (lockGrouping)
+            {
+                // Impedisce rimozione grouping
+                column.OptionsColumn.AllowGroup =
+                    DevExpress.Utils.DefaultBoolean.False;
+
+                // Impedisce trascinamento
+                column.OptionsColumn.AllowMove = false;
+
+                // Nasconde pannello grouping
+                //view.OptionsView.ShowGroupPanel = false;
+
+                // Eventuale blocco menu contestuale
+                view.OptionsMenu.EnableGroupPanelMenu = false;
+            }
+            else
+            {
+                // Consente grouping libero
+                column.OptionsColumn.AllowGroup =
+                    DevExpress.Utils.DefaultBoolean.True;
+
+                column.OptionsColumn.AllowMove = true;
+
+                //view.OptionsView.ShowGroupPanel = true;
+
+                view.OptionsMenu.EnableGroupPanelMenu = true;
+            }
+        }
+
+        /// <summary>
+        /// Raggruppa automaticamente usando una lista di nomi campo
+        /// </summary>
+        /// <param name="view">GridView</param>
+        /// <param name="fieldNames">Lista nomi colonne/campi</param>
+        /// <param name="lockGrouping">
+        /// true  = grouping bloccato
+        /// false = grouping modificabile
+        /// </param>
+        public static void ApplyGrouping(
+            GridView view,
+            List<string> fieldNames,
+            bool lockGrouping = false)
+        {
+            if (view == null || fieldNames == null || fieldNames.Count == 0)
+                return;
+
+            // Pulisce grouping precedenti
+            view.ClearGrouping();
+
+            int groupIndex = 0;
+
+            foreach (string fieldName in fieldNames)
+            {
+                GridColumn col = view.Columns[fieldName];
+
+                if (col == null)
+                    continue;
+
+                // Applica grouping
+                col.GroupIndex = groupIndex++;
+
+                // Ordinamento
+                col.SortOrder =
+                    DevExpress.Data.ColumnSortOrder.Ascending;
+
+                if (lockGrouping)
+                {
+                    // Blocca rimozione grouping
+                    col.OptionsColumn.AllowGroup =
+                        DevExpress.Utils.DefaultBoolean.False;
+
+                    // Blocca trascinamento
+                    col.OptionsColumn.AllowMove = false;
+                }
+                else
+                {
+                    // Grouping modificabile
+                    col.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
+
+                    col.OptionsColumn.AllowMove = true;
+                }
+            }
+
+            // Pannello grouping
+            //view.OptionsView.ShowGroupPanel = !lockGrouping;
+            view.OptionsMenu.EnableGroupPanelMenu = !lockGrouping;
+
+            // Espande gruppi
+            view.ExpandAllGroups();
+        }
+
+        /// <summary>
+        /// Applica automaticamente uno o più raggruppamenti
+        /// </summary>
+        /// <param name="view">GridView</param>
+        /// <param name="columns">Lista colonne da raggruppare</param>
+        /// <param name="lockGrouping">
+        /// true  = l'utente NON può rimuovere il grouping
+        /// false = grouping modificabile
+        /// </param>
+        /// <param name="clearPreviousGroups">
+        /// true  = pulisce grouping esistenti
+        /// false = mantiene grouping esistenti
+        /// </param>
+        public static void ApplyGrouping(
+            GridView view,
+            List<GridColumn> columns,
+            bool lockGrouping = false,
+            bool clearPreviousGroups = true)
+        {
+            if (view == null || columns == null || columns.Count == 0)
+                return;
+
+            // Rimuove grouping precedenti
+            if (clearPreviousGroups)
+                view.ClearGrouping();
+
+            int groupIndex = 0;
+
+            foreach (GridColumn col in columns)
+            {
+                if (col == null)
+                    continue;
+
+                // Applica grouping
+                col.GroupIndex = groupIndex++;
+
+                // Ordinamento coerente
+                col.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+
+                if (lockGrouping)
+                {
+                    // Impedisce rimozione grouping
+                    col.OptionsColumn.AllowGroup =
+                        DevExpress.Utils.DefaultBoolean.False;
+
+                    // Impedisce trascinamento
+                    col.OptionsColumn.AllowMove = false;
+                }
+                else
+                {
+                    // Consente modifica grouping
+                    col.OptionsColumn.AllowGroup =
+                        DevExpress.Utils.DefaultBoolean.True;
+
+                    col.OptionsColumn.AllowMove = true;
+                }
+            }
+
+            // Configurazione pannello grouping
+            //view.OptionsView.ShowGroupPanel = !lockGrouping;
+            view.OptionsMenu.EnableGroupPanelMenu = !lockGrouping;
+
+            // Espande tutti i gruppi
+            view.ExpandAllGroups();
+        }
+        #endregion COLUMN_IN_GROUPING
+
     }
 }
