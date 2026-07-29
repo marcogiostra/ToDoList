@@ -90,6 +90,7 @@
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.txtTitoloInfoEstese = new DevExpress.XtraEditors.TextEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.TC)).BeginInit();
             this.TC.SuspendLayout();
             this.tpToDoList.SuspendLayout();
@@ -779,6 +780,10 @@
             this.labelControl11.TabIndex = 1;
             this.labelControl11.Text = "Titolo";
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmMainNEW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -911,5 +916,6 @@
         private MyPErsonalControl.myRich myRichInfoEstese;
         private DevExpress.XtraGrid.GridControl gridControl3;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
+        private System.Windows.Forms.Timer timer1;
     }
 }

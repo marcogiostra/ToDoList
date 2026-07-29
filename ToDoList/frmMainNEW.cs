@@ -131,25 +131,7 @@ namespace ToDoList
             _infoesteseCategorieFilePathOLD = Path.Combine(dataFolder, fileInfoEstesehivioCategorieOLD);
 
 
-            //TO DO LIST
-            InitializeToDoList();
-            LoadToDoListCategorie();
-            LoadToDoList();
-
-            //MEMO
-            myRichMemo.LoadText(string.Empty);
-            myRichMemo.ResetFontToDefault();
-            LoadMemo();
-
-            //MIO ARCHIVIO
-            InitializeMioArchivio();
-            LoadMioArchivioCategorie();
-            LoadMioArchivio();
-
-            //INFO ESTESE
-            InitializeInfoEstese();
-            LoadInfoEsteseCategorie();
-            LoadInfoEstese();
+          
 
         }
 
@@ -157,6 +139,9 @@ namespace ToDoList
         {
             //setting the localizer
             GridLocalizer.Active = new CustomLocalizer();
+
+            timer1.Enabled = true;
+
         }
         #endregion Class
 
@@ -1486,5 +1471,31 @@ namespace ToDoList
             }
         }
         #endregion INFO_ESTESE
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Enabled = false;
+            //TO DO LIST
+            InitializeToDoList();
+            LoadToDoListCategorie();
+            LoadToDoList();
+
+            //MEMO
+            myRichMemo.LoadText(string.Empty);
+            myRichMemo.ResetFontToDefault();
+            LoadMemo();
+
+            //MIO ARCHIVIO
+            InitializeMioArchivio();
+            LoadMioArchivioCategorie();
+            LoadMioArchivio();
+
+            //INFO ESTESE
+            InitializeInfoEstese();
+            LoadInfoEsteseCategorie();
+            LoadInfoEstese();
+            MyCursorHelper.Close();
+
+        }
     }
 }

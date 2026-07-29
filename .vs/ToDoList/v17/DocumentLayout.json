@@ -3,23 +3,34 @@
   "WorkspaceRootPath": "E:\\svil_Giosh\\007_ToDoList\\ToDoList\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|e:\\svil_giosh\\007_todolist\\todolist\\todolist\\changes.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\changes.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|ToDoList||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|E:\\svil_Giosh\\007_ToDoList\\ToDoList\\todolist\\frmmainnew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\frmmainnew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|e:\\svil_giosh\\007_todolist\\todolist\\todolist\\changes.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\changes.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|E:\\svil_Giosh\\007_ToDoList\\ToDoList\\todolist\\frmmainnew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\frmmainnew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|E:\\svil_Giosh\\007_ToDoList\\ToDoList\\todolist\\static\\dev_gridview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\static\\dev_gridview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|E:\\svil_Giosh\\007_ToDoList\\ToDoList\\todolist\\additemform\\frmadditemtdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\additemform\\frmadditemtdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|ToDoList||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|e:\\svil_giosh\\007_todolist\\todolist\\todolist\\static\\mycursorhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\static\\mycursorhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|E:\\svil_Giosh\\007_ToDoList\\ToDoList\\todolist\\frmmainnew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\frmmainnew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\svil_Giosh\\001_Ricettario_MG\\Ricettario_MG\\RicettarioMG\\ClassiStatiche\\CursorHelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|E:\\svil_Giosh\\007_ToDoList\\ToDoList\\todolist\\static\\dev_gridview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\static\\dev_gridview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|E:\\svil_Giosh\\007_ToDoList\\ToDoList\\todolist\\additemform\\frmadditemtdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -30,16 +41,15 @@
       "RelativeMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\fa dare.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|E:\\svil_Giosh\\007_ToDoList\\ToDoList\\todolist\\additemform\\frmadditemtdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\additemform\\frmadditemtdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|E:\\svil_Giosh\\007_ToDoList\\ToDoList\\todolist\\mypersonalcontrol\\myrich.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\mypersonalcontrol\\myrich.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|E:\\svil_Giosh\\007_ToDoList\\ToDoList\\todolist\\class\\infoeestesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\class\\infoeestesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6F4A7E-781B-46B1-AAB4-4251433F4674}|ToDoList\\ToDoList.csproj|e:\\svil_giosh\\007_todolist\\todolist\\todolist\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -49,24 +59,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "MyCursorHelper.cs",
+              "DocumentMoniker": "E:\\svil_Giosh\\007_ToDoList\\ToDoList\\ToDoList\\Static\\MyCursorHelper.cs",
+              "RelativeDocumentMoniker": "ToDoList\\Static\\MyCursorHelper.cs",
+              "ToolTip": "E:\\svil_Giosh\\007_ToDoList\\ToDoList\\ToDoList\\Static\\MyCursorHelper.cs",
+              "RelativeToolTip": "ToDoList\\Static\\MyCursorHelper.cs",
+              "ViewState": "AgIAABkBAAAAAAAAAAAqwFoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-29T21:28:04.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CursorHelper.cs",
+              "DocumentMoniker": "E:\\svil_Giosh\\001_Ricettario_MG\\Ricettario_MG\\RicettarioMG\\ClassiStatiche\\CursorHelper.cs",
+              "RelativeDocumentMoniker": "..\\..\\001_Ricettario_MG\\Ricettario_MG\\RicettarioMG\\ClassiStatiche\\CursorHelper.cs",
+              "ToolTip": "E:\\svil_Giosh\\001_Ricettario_MG\\Ricettario_MG\\RicettarioMG\\ClassiStatiche\\CursorHelper.cs",
+              "RelativeToolTip": "..\\..\\001_Ricettario_MG\\Ricettario_MG\\RicettarioMG\\ClassiStatiche\\CursorHelper.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAFUBAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-29T21:24:17.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "CHANGES.md",
               "DocumentMoniker": "E:\\svil_Giosh\\007_ToDoList\\ToDoList\\ToDoList\\CHANGES.md",
               "RelativeDocumentMoniker": "ToDoList\\CHANGES.md",
               "ToolTip": "E:\\svil_Giosh\\007_ToDoList\\ToDoList\\ToDoList\\CHANGES.md",
               "RelativeToolTip": "ToDoList\\CHANGES.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2026-03-10T22:15:05.444Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "myRich.cs",
               "DocumentMoniker": "E:\\svil_Giosh\\007_ToDoList\\ToDoList\\ToDoList\\MyPErsonalControl\\myRich.cs",
               "RelativeDocumentMoniker": "ToDoList\\MyPErsonalControl\\myRich.cs",
@@ -78,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "InfoeEstesa.cs",
               "DocumentMoniker": "E:\\svil_Giosh\\007_ToDoList\\ToDoList\\ToDoList\\Class\\InfoeEstesa.cs",
               "RelativeDocumentMoniker": "ToDoList\\Class\\InfoeEstesa.cs",
@@ -90,25 +126,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "frmAddItemTDL.cs",
               "DocumentMoniker": "E:\\svil_Giosh\\007_ToDoList\\ToDoList\\ToDoList\\AddItemForm\\frmAddItemTDL.cs",
               "RelativeDocumentMoniker": "ToDoList\\AddItemForm\\frmAddItemTDL.cs",
               "ToolTip": "E:\\svil_Giosh\\007_ToDoList\\ToDoList\\ToDoList\\AddItemForm\\frmAddItemTDL.cs",
               "RelativeToolTip": "ToDoList\\AddItemForm\\frmAddItemTDL.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAzwCkAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T18:07:27.141Z"
+              "WhenOpened": "2026-03-10T18:07:27.141Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "frmAddItemTDL.cs [Progettazione]",
               "DocumentMoniker": "E:\\svil_Giosh\\007_ToDoList\\ToDoList\\ToDoList\\AddItemForm\\frmAddItemTDL.cs",
               "RelativeDocumentMoniker": "ToDoList\\AddItemForm\\frmAddItemTDL.cs",
-              "ToolTip": "D:\\svil_Giosh\\007_ToDoList\\ToDoList\\ToDoList\\AddItemForm\\frmAddItemTDL.cs [Progettazione]",
+              "ToolTip": "E:\\svil_Giosh\\007_ToDoList\\ToDoList\\ToDoList\\AddItemForm\\frmAddItemTDL.cs [Progettazione]",
+              "RelativeToolTip": "ToDoList\\AddItemForm\\frmAddItemTDL.cs [Progettazione]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T18:07:07.813Z"
+              "WhenOpened": "2026-03-10T18:07:07.813Z",
+              "EditorCaption": " [Progettazione]"
             },
             {
               "$type": "Document",
@@ -118,23 +157,38 @@
               "RelativeDocumentMoniker": "ToDoList\\frmMainNEW.cs",
               "ToolTip": "E:\\svil_Giosh\\007_ToDoList\\ToDoList\\ToDoList\\frmMainNEW.cs",
               "RelativeToolTip": "ToDoList\\frmMainNEW.cs",
-              "ViewState": "AgIAAHkCAAAAAAAAAIAwwI0CAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAgwCkFAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T09:42:23.928Z"
+              "WhenOpened": "2026-03-10T09:42:23.928Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "ToDoList",
+              "DocumentMoniker": "E:\\svil_Giosh\\007_ToDoList\\ToDoList\\ToDoList\\ToDoList.csproj",
+              "RelativeDocumentMoniker": "ToDoList\\ToDoList.csproj",
+              "ToolTip": "E:\\svil_Giosh\\007_ToDoList\\ToDoList\\ToDoList\\ToDoList.csproj*",
+              "RelativeToolTip": "ToDoList\\ToDoList.csproj*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-11T00:32:33.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "frmMainNEW.cs [Progettazione]",
               "DocumentMoniker": "E:\\svil_Giosh\\007_ToDoList\\ToDoList\\ToDoList\\frmMainNEW.cs",
               "RelativeDocumentMoniker": "ToDoList\\frmMainNEW.cs",
-              "ToolTip": "D:\\svil_Giosh\\007_ToDoList\\ToDoList\\ToDoList\\frmMainNEW.cs [Progettazione]",
+              "ToolTip": "E:\\svil_Giosh\\007_ToDoList\\ToDoList\\ToDoList\\frmMainNEW.cs [Progettazione]",
+              "RelativeToolTip": "ToDoList\\frmMainNEW.cs [Progettazione]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T16:34:43.666Z"
+              "WhenOpened": "2026-03-10T16:34:43.666Z",
+              "EditorCaption": " [Progettazione]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "DEV_GridView.cs",
               "DocumentMoniker": "E:\\svil_Giosh\\007_ToDoList\\ToDoList\\ToDoList\\Static\\DEV_GridView.cs",
               "RelativeDocumentMoniker": "ToDoList\\Static\\DEV_GridView.cs",
@@ -146,17 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ToDoList",
-              "DocumentMoniker": "E:\\svil_Giosh\\007_ToDoList\\ToDoList\\ToDoList\\ToDoList.csproj",
-              "RelativeDocumentMoniker": "ToDoList\\ToDoList.csproj",
-              "ToolTip": "D:\\svil_Giosh\\007_ToDoList\\ToDoList\\ToDoList\\ToDoList.csproj*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-11T00:32:33.547Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "FA DARE.md",
               "DocumentMoniker": "E:\\svil_Giosh\\007_ToDoList\\ToDoList\\ToDoList\\FA DARE.md",
               "RelativeDocumentMoniker": "ToDoList\\FA DARE.md",

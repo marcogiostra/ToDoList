@@ -1,5 +1,10 @@
 Changelog
 =========
+
+v.2.2.0 
+---------------------------------------------------------
+- differenziato con timer caricamento dei dati
+
 v.2.1.0 
 ---------------------------------------------------------
 - Aggiunto il raggruupamento delle colonne categorie su tutte le gridview, (solo nel caso delle informazioni estese è bloccata)

@@ -103,6 +103,7 @@
     <Compile Include="Static\Formattazioni.cs" />
     <Compile Include="Static\Funzioni.cs" />
     <Compile Include="Static\MSGBOX.cs" />
+    <Compile Include="Static\MyCursorHelper.cs" />
     <EmbeddedResource Include="AddItemForm\frmAddItemTDL.resx">
       <DependentUpon>frmAddItemTDL.cs</DependentUpon>
     </EmbeddedResource>
